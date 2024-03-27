@@ -33,7 +33,7 @@ API Details: https://musicbrainz.org/doc/MusicBrainz_API
     * Title
     * Date
     * Status
-    * Cover Art URL - Cover art must be retrieved using a separate API, see API Examples Below
+    * CoverArtUrl - Cover art must be retrieved using a separate API, see API Examples Below
 
 ## MusicBrainz API Examples
 
