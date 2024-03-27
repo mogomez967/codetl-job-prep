@@ -6,26 +6,28 @@ In this project, you will use the MusicBrainz API to store both artist and relea
 
 API Details: https://musicbrainz.org/doc/MusicBrainz_API
 
-## Running mongo DB
+## Running mongo DB using Docker
+
+For an intro to Docker, check out: https://docker-curriculum.com/ 
 
 * Download and install Docker Desktop: https://www.docker.com/products/docker-desktop/
-* A Dockerfile has been provided that can be used to build a docker image
-* Run the following command from terminal to build a docker image for mongodb: `docker build -t code-tl-musicbrainz .`
-* Once the image has been built, you can run the image using the following command: `docker run -d --name code-tl-musicbrainz code-tl-musicbrainz`. Specifying -d will run the image in detached mode
+* A Docker compose file has already been provided for running mongodb
+* Run the following command to run a container with mongodb: `docker-compose up -d` Specifying -d will run the image in detached mode
 * To check the status of your docker images: `docker ps`
-* To stop a docker image: `docker stop <container-name>` in this project, that would be `docker stop code-tl-musicbrainz`
-* To start the image: `docker start <container-name>`. `docker start code-tl-musicbrainz`
+* To stop a docker image: `docker stop <container-name>` in this project, that would be `docker stop code_tl_musicbrainz`
+* To start the image: `docker start <container-name>`. `docker start code_tl_musicbrainz`
 * See Docker documentation for more information on building/running containers
 
 ## Project objectives
 
 1. Write a script or application that will allow you to search MusicBrainz for artists and load both their artist data and release data into mongoDB.
-2. For the `Artist` collection, store the following fields:
+2. Add a database to mongodb that you will use for your project. Use this database to add the collections described below.
+3. For the `Artist` collection, store the following fields:
     * MBID - this is the artist ID from MusicBrainz
     * Name
     * Country
     * Type
-3. For the `Release` collection, store the following fields:
+4. For the `Release` collection, store the following fields:
     * MBID - this is the release ID from MusicBrainz
     * Artist
     * ArtistId - this would be the mongo Object ID that corresponds to the Artist
